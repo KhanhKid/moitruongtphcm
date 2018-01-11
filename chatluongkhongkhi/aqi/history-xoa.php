@@ -1,5 +1,6 @@
 <?php
 	
-echo $_GET['username'] ;
+$a =  $_GET['username'] ;
+echo $a ;
 
 ?>
