@@ -1,6 +1,7 @@
 <?php
 	
 $a =  $_GET['username'] ;
-echo $a ;
+$b = $GET['filename']
+echo $b ;
 
 ?>
