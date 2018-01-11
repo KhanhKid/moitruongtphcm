@@ -1,7 +1,3 @@
 <?php
-if(isset($_GET('username'))
-   {
-    echo "oke"
-   }
- 
+echo $_GET['username'] ;
 ?>
