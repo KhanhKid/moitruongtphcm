@@ -472,7 +472,7 @@
 									<td> <a style="color:#0000cc" href="dashboard-aqi.php?username=<?php echo $tentaikhoan ?>&active=dulieuuser&&filename=<?php echo $row[2];?>" > <?php  echo $row[2];?></a></td>
 									<td><?php echo $row[3]; ?></td>
 <!-- 									<td><a href="aqi-history-xoa.php?username=<?php echo $tentaikhoan ?>&tenfile=<?php echo $row[2]; ?>" class="btn" style="coltdor:white;background: red; margin-left:20px">Xóa</a></td>     -->
-									<td><a href ="https://www.facebook.com/">test</a></td>
+									<td><a href ="wqi-history-xoa.php">test</a></td>
 								</tr>
 							</tbody>
 							<?php
