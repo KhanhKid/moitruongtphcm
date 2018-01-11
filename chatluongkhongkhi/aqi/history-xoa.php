@@ -1,4 +1,5 @@
 <?php
-echo  "oke"
+$name = "son";
+echo $name
  
 ?>
