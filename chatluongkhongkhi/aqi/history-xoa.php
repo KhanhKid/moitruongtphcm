@@ -1,5 +1,7 @@
 <?php
-$name = "son";
-echo $name
+if(isset($_GET('username'))
+   {
+    echo "oke"
+   }
  
 ?>
