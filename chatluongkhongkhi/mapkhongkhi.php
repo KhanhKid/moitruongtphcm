@@ -8,7 +8,7 @@
  }
    else{
     $ts = "O3";
-      $ngay ="01-03-2011";
+      $ngay ="01-03-2016";
    }
       
 
@@ -555,13 +555,13 @@
                 <span class="glyphicon glyphicon-flash"></span> 
           </span>
           <select class="form-control input-md" id="lc_ngay" style="border-radius: 0px;height:40px; ">                            
-                                <option value="01-03-2011">Ngày 01/03/2011</option>
-                                <option value="02-03-2011">Ngày 02/03/2011</option>
-                                <option value="03-03-2011">Ngày 03/03/2011</option>
-                                <option value="04-03-2011">Ngày 04/03/2011</option>
-                                <option value="07-03-2011">Ngày 07/03/2011</option>
-                                <option value="08-03-2011">Ngày 08/03/2011</option>
-                                <option value="09-03-2011">Ngày 09/03/2011</option>
+                                <option value="01-03-2016">Ngày 01/03/2016</option>
+                                <option value="02-03-2016">Ngày 02/03/2016</option>
+                                <option value="03-03-2016">Ngày 03/03/2016</option>
+                                <option value="04-03-2016">Ngày 04/03/2016</option>
+                                <option value="07-03-2016">Ngày 07/03/2016</option>
+                                <option value="08-03-2016">Ngày 08/03/2016</option>
+                                <option value="09-03-2016">Ngày 09/03/2016</option>
           </select>
 
         </div>
