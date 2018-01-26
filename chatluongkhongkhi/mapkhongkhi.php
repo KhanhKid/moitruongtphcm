@@ -4,7 +4,7 @@
  {
   $ts = $_GET["ts"];
         $ngay = $_GET["ngay"];
-        $ngayupdate = $ngay.replace("2011","2016");
+        $ngayupdate = str_replace("2011", "2016", $ngay);
         $username = $_GET["username"];
  }
    else{
