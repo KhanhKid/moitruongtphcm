@@ -4,6 +4,7 @@
  {
   $ts = $_GET["ts"];
         $ngay = $_GET["ngay"];
+        $ngayupdate = $ngay.replace("2011","2016");
         $username = $_GET["username"];
  }
    else{
@@ -676,7 +677,7 @@ var Image = new Array ("00","01","02","03","04","05","06","07","08","09","10",
              "11","12","13","14","15","16","17","18","19","20","21","22","23"); 
 var   imgCount = 24;
 
-var   imgRoot = "chatluongkhongkhi/Data/" + "<?php echo $ts.'/'.$ngay.replace("2011","2016").'_' ?>";
+var   imgRoot = "chatluongkhongkhi/Data/" + "<?php echo $ts.'/'.$ngayupdate.'_' ?>";
 var   imgType = ".jpg";
 
 
