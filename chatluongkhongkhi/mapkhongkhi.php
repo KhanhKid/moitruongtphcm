@@ -4,11 +4,12 @@
  {
   $ts = $_GET["ts"];
         $ngay = $_GET["ngay"];
+        $ngayupdate = str_replace("2016", "2011", $ngay);
         $username = $_GET["username"];
  }
    else{
     $ts = "O3";
-      $ngay ="01-03-2011";
+      $ngay ="01-03-2016";
    }
       
 
@@ -555,13 +556,13 @@
                 <span class="glyphicon glyphicon-flash"></span> 
           </span>
           <select class="form-control input-md" id="lc_ngay" style="border-radius: 0px;height:40px; ">                            
-                                <option value="01-03-2011">Ngày 01/03/2011</option>
-                                <option value="02-03-2011">Ngày 02/03/2011</option>
-                                <option value="03-03-2011">Ngày 03/03/2011</option>
-                                <option value="04-03-2011">Ngày 04/03/2011</option>
-                                <option value="07-03-2011">Ngày 07/03/2011</option>
-                                <option value="08-03-2011">Ngày 08/03/2011</option>
-                                <option value="09-03-2011">Ngày 09/03/2011</option>
+                                <option value="01-03-2016">Ngày 01/03/2016</option>
+                                <option value="02-03-2016">Ngày 02/03/2016</option>
+                                <option value="03-03-2016">Ngày 03/03/2016</option>
+                                <option value="04-03-2016">Ngày 04/03/2016</option>
+                                <option value="07-03-2016">Ngày 07/03/2016</option>
+                                <option value="08-03-2016">Ngày 08/03/2016</option>
+                                <option value="09-03-2016">Ngày 09/03/2016</option>
           </select>
 
         </div>
@@ -676,8 +677,7 @@ var Image = new Array ("00","01","02","03","04","05","06","07","08","09","10",
              "11","12","13","14","15","16","17","18","19","20","21","22","23"); 
 var   imgCount = 24;
 
-
-var   imgRoot = "chatluongkhongkhi/Data/" + "<?php echo $ts.'/'.$ngay.'_' ?>";
+var   imgRoot = "chatluongkhongkhi/Data/" + "<?php echo $ts.'/'.$ngayupdate.'_' ?>";
 var   imgType = ".jpg";
 
 

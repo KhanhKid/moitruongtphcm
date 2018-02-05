@@ -18,7 +18,7 @@ pg_query($conn,"$drop_tbl_thang");
 
 $result =pg_query($conn,"$delete_data");
 if($result== true){
-	echo "<h3>Bạn đã xóa dữ liệu thành công, bấm vào"."<a href=\"http://localhost/khoaluan/quanly/dashboard.php?username=admin&active=dulieuwqi\"> đây </a>". "để quay lại !</h3>";
+	echo "<h3>Bạn đã xóa dữ liệu thành công, bấm vào"."<a href=\"dashboard.php?username=admin&active=dulieuwqi\"> đây </a>". "để quay lại !</h3>";
 }
  
 ?>

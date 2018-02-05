@@ -1211,7 +1211,7 @@ if(!error){
                            {
                               name: "<?php echo $ts ?>",
                               data: [],  
-                              pointStart: Date.UTC(2011, 02, 01),
+                              pointStart: Date.UTC(2016, 02, 01),
                   			pointInterval: 3600 * 1000                   
                            }, 
                            

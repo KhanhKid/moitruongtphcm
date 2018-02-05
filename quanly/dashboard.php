@@ -214,7 +214,7 @@
             <div class="container-fluid">
                 <nav class="pull-left">
                     <ul>
-                            <li><a href="../index-quanly1.php?username=<?php echo "admin" ?>" style=""><span class="glyphicon glyphicon-arrow-left"> </span> Trang chủ</a></li>
+                            <li><a href="../index-user.php?username=<?php echo "admin" ?>" style=""><span class="glyphicon glyphicon-arrow-left"> </span> Trang chủ</a></li>
                     </ul>
                 </nav>
                 <p class="copyright pull-right">
