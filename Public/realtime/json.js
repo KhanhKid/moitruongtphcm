@@ -144,7 +144,7 @@ function addChartTemp(id, dataTemp){
 function returnWeatherDay(long, lat){
    if (long && lat) {
       $.ajax({
-         url: 'http://api.openweathermap.org/data/2.5/forecast/daily',
+         url: 'https://api.openweathermap.org/data/2.5/forecast/daily',
          processData: false,
          contentType: false,
          data: {
@@ -164,7 +164,7 @@ function returnWeatherDay(long, lat){
 function returnWeatherHours(dataDay, long,lat){
   if (long && lat) {
       $.ajax({
-         url: 'http://api.openweathermap.org/data/2.5/forecast',
+         url: 'https://api.openweathermap.org/data/2.5/forecast',
          processData: false,
           contentType: false,
          data: {
