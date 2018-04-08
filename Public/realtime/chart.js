@@ -137,9 +137,7 @@ function AddChart(id, minV, maxV){
         var dtime = xData[xData.length -1];
         var time = new Date(dtime);
         $("#currentTime").text(time.toUTCString());
-        console.log(date);
         var obj = returnValue(AQI);
-        console.log(obj);
         if (obj) {
             $("#trangthaiAQI").text(obj.trangThai);
             $("#trangthaiAQI").css("color",obj.color);
