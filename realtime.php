@@ -1,6 +1,6 @@
 	<div class="container-fluid" style="padding: 20px">
 		<div class="row" style="height:400px">
-			<div class="col-md-6" style="">
+			<div class="col-md-7" style="">
 				<div style="" id='panelChart' class="panelBorder">
 					<div id="AQI">
 							<div class="col-sm-4" id='aqiValue'>
@@ -178,7 +178,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6 panelBorder" style=" height:600px" id="map-realtime" >
+			<div class="col-md-5 panelBorder" style=" height:600px" id="map-realtime" >
 				
 			</div>
 		</div>
