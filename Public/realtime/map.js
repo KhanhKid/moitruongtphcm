@@ -4,7 +4,7 @@ var map = L.mapbox.map('map-realtime', 'mapbox.streets')
 .setView([10.6,106.689444], 9);
 
 // Read Location to data.json
-$.getJSON( "data.json", function( data ) {
+$.getJSON( "Public/realtime/data.json", function( data ) {
     var arrayMarker = [] ;
     $.each(data, function(k, v){
         var k = k ;
