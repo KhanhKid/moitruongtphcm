@@ -133,7 +133,10 @@ function AddChart(id, minV, maxV){
         var data = chart.yAxis[0].series[0].processedYData;
         var AQI = Highcharts.numberFormat(data[data.length -1],0);
         $("#aqiValue").text(AQI);
-        var date =  chart.xAxis[0];
+        var xData =  chart.series[0].xData
+        var dtime = xData[xData.length -1];
+        var time = new Date(dtime);
+        $("#currentTime").text(time.toUTCString());
         console.log(date);
         var obj = returnValue(AQI);
         console.log(obj);
