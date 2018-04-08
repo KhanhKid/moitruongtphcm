@@ -178,7 +178,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6 panelBorder" style=" height:600px" id="map" >
+			<div class="col-md-6 panelBorder" style=" height:600px" id="map-realtime" >
 				
 			</div>
 		</div>
@@ -299,6 +299,6 @@
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript" src="Public/realtine/chart.js"></script>
-	<script type="text/javascript" src="Public/realtine/json.js"></script>
-	<script type="text/javascript" src="Public/realtine/map.js"></script>
+	<script type="text/javascript" src="Public/realtime/chart.js"></script>
+	<script type="text/javascript" src="Public/realtime/json.js"></script>
+	<script type="text/javascript" src="Public/realtime/map.js"></script>
