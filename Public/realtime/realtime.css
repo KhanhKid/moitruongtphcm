@@ -1,0 +1,113 @@
+.container-fluid{
+			padding: 20px;
+		}
+		.panelBorder{
+			border: 1px solid white;
+			padding: 20px;
+			-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.6);
+		}
+		#panelChart{
+			height:600px;
+		}
+		#panelDuBao{
+			height:400px;
+			margin-top: 50px;
+		}
+		#AQI{
+			height:100px;
+		}
+		#aqiValue{
+			height: 98px;
+			color: #fff;
+			font-size: 70px;
+			font-weight: bold;
+			border-radius: 5px;
+			text-align: center;
+		}
+		#trangthaiAQI{
+			height:55px;
+			font-size: 35px;
+			color: green;
+			font-weight: bold;
+		}
+		.chart{
+			height:75px;
+			padding: 0;
+			border-bottom:1px solid #000;
+		}
+		.highcharts-credits{
+			display: none;
+		}
+		.minmax{
+			padding: 20px 0 0 0;
+			height:100%;
+			vertical-align: middle;
+			text-align: center;
+		
+		}
+		.thongso{
+			padding: 20px 0 0 0;
+		}
+		.tenthongso{
+			margin-top: 10px
+		}
+		.current{
+			padding: 0;
+			text-align: center;
+		}
+		.chartdubao{
+			height:200px;
+			padding: 0;
+			border-left: 1px dotted #000;
+		}
+		.chartdubao:first-child{
+			border-left:none;
+		}
+		.chartdubao .chart{
+			height:75px;
+		}
+		.head-panelDuBao > .col-md-8{
+			border-bottom-width: 1px;
+			border-bottom-color: red;
+			border-bottom-style: dotted;
+			margin-bottom:20px;
+			padding: 0 40px 20px 40px;
+		}
+		.totalDuBao{
+			height: 100px;
+			width: 100px;
+			float: left;
+			position: relative;
+		}
+		.totalDuBao:first-child{
+			margin-left: 40px
+		}
+		.totalDuBao span.glyphicon{
+			font-size: 80px;
+			z-index: 1;
+			color: red
+		}
+		.totalDuBao label{
+			position: absolute;
+			top:50%;
+			left:0;
+			width: 100%;
+			z-index: 2;
+			color: #fff;
+			font-weight: bold;
+			font-size: 18px;
+			margin-top: -20px;
+			text-align: center;
+		}
+		.tempMin{
+			margin-top: -20px
+		}		
+		.highcharts-windbarb-series path{
+			stroke-width:1;
+		}
+		.chart-title{
+			height: 30px;
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: bold;		
+		}

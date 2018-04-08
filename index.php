@@ -14,6 +14,7 @@
     <link rel="stylesheet"  type="text/css" href="Public/css/home.css">
 	<link rel="stylesheet"  type="text/css" href="Public/css/menu.css">
 	<link rel="stylesheet"  type="text/css" href="Public/css/trangchu.css">
+	<link rel="stylesheet"  type="text/css" href="Public/realtime/realtime.css">
 
     <!-- Bootstrap -->
     <link rel="stylesheet"  href="Public/bootstrap/css/bootstrap.min.css">
@@ -39,7 +40,12 @@
 	<link rel="stylesheet"  type="text/css" href="slide/pgwslider.css">
 	<script src="slide/pgwslider.js"></script>
 
+	<script type="text/javascript" src="Public/realtime/highcharts.js"></script>
+    <script type="text/javascript" src="Public/realtime/highcharts-more.js"></script>
+   	<script type="text/javascript" src="Public/realtime/windbarb.js"></script>
 
+	<script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+	<link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
 <style type="text/css">
  body{
     font-family:    'Segoe UI',Arial,sans-serif;
@@ -191,7 +197,7 @@ figure:hover .tieude{
 
 			<div class="row" style="margin-top: 75px">
 				<?php
-					require("dulieutrangchu/trangchu.php"); 
+					require("realtime.php"); 
 				?>
 			</div> <!-- end content -->
 
