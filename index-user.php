@@ -1,11 +1,10 @@
+
 <?php 
     if(isset($_GET["page"]))
         $page = $_GET["page"];
     else
         $page = "";
- ?>    
-
-
+ ?>   
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +20,7 @@
     <link rel="stylesheet"  type="text/css" href="Public/css/home.css">
 	<link rel="stylesheet"  type="text/css" href="Public/css/menu.css">
 	<link rel="stylesheet"  type="text/css" href="Public/css/trangchu.css">
+	<link rel="stylesheet"  type="text/css" href="Public/realtime/realtime.css">
 
     <!-- Bootstrap -->
     <link rel="stylesheet"  href="Public/bootstrap/css/bootstrap.min.css">
@@ -39,18 +39,19 @@
 		<!-- fullscreen -->
 	<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.0/mapbox-gl-geocoder.min.js'></script>
 	<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.0/mapbox-gl-geocoder.css' type='text/css' />
-		<!-- show location -->
-		
-<!-- Highchart -->
-    <script type="text/javascript" src="Public/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script> 
+
 
 	<!-- trang chu -->
 	<link rel="stylesheet"  type="text/css" href="test.css">
 	<link rel="stylesheet"  type="text/css" href="slide/pgwslider.css">
 	<script src="slide/pgwslider.js"></script>
 
+	<script type="text/javascript" src="Public/realtime/highcharts.js"></script>
+    <script type="text/javascript" src="Public/realtime/highcharts-more.js"></script>
+   	<script type="text/javascript" src="Public/realtime/windbarb.js"></script>
 
+	<script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+	<link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
 <style type="text/css">
  body{
     font-family:    'Segoe UI',Arial,sans-serif;
@@ -123,17 +124,14 @@ figure:hover .tieude{
 
 </head>
 <body>
-
-<?php
+	<?php
     $tentaikhoan = '';
     if(isset($_GET['username'])){
         $tentaikhoan = $_GET['username'];
     } 
 ?>
-
-
 	<div class="container" id="skhcn" style="background-color: white"> <!-- begin content -->
-		<div id="header">
+			<div id="header">
 			<header><!-- begin header -->       
 				<div class="">
 					<div class="row">
@@ -158,7 +156,6 @@ figure:hover .tieude{
 			</div>  <!-- End .slide -->
 
 
-			<!--start menu -->
 			<div class="row" style="position: relative">
 			<div id="menu">
 				<nav>
@@ -214,7 +211,7 @@ figure:hover .tieude{
                     case 'clkhongkhi':  require"chatluongkhongkhi/mapkhongkhi.php";
                         break;
                    
-                    default:  require("dulieutrangchu/trangchu.php");;
+                    default:  require("realtime.php");;
                 }  
 				?>
 			</div> <!-- end content -->
@@ -235,7 +232,7 @@ figure:hover .tieude{
 						<ul>
 							<li style="margin-top: 18px;padding-left: 30px; font-size: 14px"><span class="glyphicon glyphicon glyphicon-road"></span> Viện khoa học công nghệ và tính toán </li>
 							<li style="margin-top: 5px;font-style: italic ">Khu công nghệ phần mềm Quang Trung - Q12-TP.HCM</li>
-							<li style="margin-left: 100px; margin-top: 5px; font-size: 14px"><span class="glyphicon glyphicon-home"> </span> <a href="#skhcn" style="color:#fff; font-weight: bold" id="trangchu">Trang chủ</a></li>
+							<li style="margin-left: 100px; margin-top: 5px; font-size: 14px"><span class="glyphicon glyphicon-home"> </span> <a href="#skhcn" style="color:#fff; font-weight: bold">Trang chủ</a></li>
 
 						</ul>
 					</div>
@@ -249,18 +246,6 @@ figure:hover .tieude{
 			</div>
 	</div>
 		
-
-	
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$("#tinhtoanwqi").click(function(){
-				alert("Bạn chưa đăng nhập !");
-			});
-			$("#tinhtoanaqi").click(function(){
-				alert("Bạn chưa đăng nhập !");
-			});
-		});
-	</script>
 
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -278,7 +263,7 @@ figure:hover .tieude{
 	<script>
 		$(document).ready(function(){
   // Add scrollspy to <body>
-  $('body').scrollspy({target: "#skhcn", offset: 50});   
+  $('body').scrollspy({target: "#diachi", offset: 50});   
 
   // Add smooth scrolling on all links inside the navbar
   $(".diachi a").on('click', function(event) {
