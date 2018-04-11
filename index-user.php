@@ -161,7 +161,7 @@ figure:hover .tieude{
 				<nav>
 					<div class="nav-fostrap col-sm-12" style="color: #fff" >
 						<ul style="margin-left: 230px">
-							<li><a href=""><span class="glyphicon glyphicon-home" aria-hidden="true"></span>  Trang Chủ</a></li>
+							<li><a href="index-user.php?username=<?php echo $tentaikhoan ?>"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>  Trang Chủ</a></li>
 							<li><a href="javascript:void(0)">Chất Lượng Nước<span class="arrow-down"></span></a>
 								<ul class="dropdown">
 									<li><a href="index-user.php?username=<?php echo $tentaikhoan ?>&page=clnuoc-begin">Giám sát chất lượng nước</a></li>
