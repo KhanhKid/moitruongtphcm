@@ -23,11 +23,6 @@ function convertCelsius(kelvin){
    return null;
 }
 
-var data = returnWeatherDay(106.669,10.75);
-var dataHour = returnWeatherHours(106.669,10.75);
-
-
-
 function setupDataTemp(dataTemp, startHour){
    var res =[];
    for (var i = 0 ; i < 8; i++) {
@@ -341,7 +336,7 @@ function returnWeatherDay(long, lat){
             APPID: 'bd5e378503939ddaee76f12ad7a97608'
          },
          success: function(dataDay){
-            returnWeatherHours(dataDay, long, lat);
+            returnWeatherHours(dataDay,long, lat);
          }
       });
    } 
@@ -363,3 +358,5 @@ function returnWeatherHours(dataDay, long,lat){
       });
    }   
 }
+
+returnWeatherDay(106.669,10.75);
