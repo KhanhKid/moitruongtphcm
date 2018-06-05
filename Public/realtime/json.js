@@ -1,38 +1,4 @@
 
-function returnWeatherDay(long, lat){
-   if (long && lat) {
-      $.ajax({
-         url: 'https://api.openweathermap.org/data/2.5/forecast/daily',
-         data: {
-            lon: long,
-            lat:lat,
-            cnt:10,
-            APPID: 'bd5e378503939ddaee76f12ad7a97608'
-         },
-         success: function(data){
-            return data
-         }
-      });
-   } 
-};
-
-
-function returnWeatherHours(long,lat){
-  if (long && lat) {
-      $.ajax({
-         url: 'https://api.openweathermap.org/data/2.5/forecast',
-         data: {
-            lon: long,
-            lat:lat,
-            APPID: 'bd5e378503939ddaee76f12ad7a97608'
-         },
-         success: function(data){
-            return data
-         }
-      });
-   }   
-};
-
 function convertDate(time){
    if (time) {
       var date = new Date(time*1000);
@@ -47,7 +13,7 @@ function convertDate(time){
       }
    }
    return null;
-};
+}
 
 function convertCelsius(kelvin){
    if (kelvin) {
@@ -55,71 +21,12 @@ function convertCelsius(kelvin){
       return celsius + "\xB0C";
    }
    return null;
-};
+}
 
 var data = returnWeatherDay(106.669,10.75);
-console.log(data)
 var dataHour = returnWeatherHours(106.669,10.75);
-console.log(dataHour);
-if (data && data.list) {
-   data.list.forEach(function(item, index){
-      if (index <= 5) {
-         var date = convertDate(item.dt);
-         var startHour = new Date(date.Year, date.Month, date.Date, 1);
-         
-         var divNgay  = $(`#ngayDuBao_${index}`);
-         var divChart = $(`#chartDuBao_${index}`);
-         //Bind dữ liệu ngày
-         if (date && divNgay && divChart) {
-            divNgay.find('.tenNgay').text(date.Day + " " + date.Date);
-            var tempMin = convertCelsius(item.temp.min);
-            var tempMax = convertCelsius(item.temp.max);
-            divNgay.find('.tempMin').text(tempMin);
-            divNgay.find('.tempMax').text(tempMax);
 
-            divChart.find('.chart-title').text(date.FullDay + " " + date.Date);
 
-            var chart = $("#pm").highcharts();
-            var data = chart.yAxis[0].series[0].processedYData;
-            var currentAQI = Highcharts.numberFormat(data[data.length -1],0);
-            var intAQI = parseInt(currentAQI);
-            var random = Math.floor(Math.random()*(intAQI+10)) + (intAQI-10);
-            var obj = returnValue(random);
-            divNgay.find("span.glyphicon").css("color",obj.color);
-
-            var weather = item.weather[0];
-            console.log(weather);
-            divChart.find('.weather').append("<img src='img/"+weather.icon+".png'></img>");
-            divChart.find('.weather').append("<p>"+ tranlateWeather(weather.description)+"</p>")
-
-         }
-         //Vẽ biễu đồ
-
-         if (dataHour && dataHour.list ) {
-            var dataWind = [];  
-            var dataTemp =[]; 
-            dataHour.list.forEach(function(giatri, stt ){
-               var ngay = new Date(giatri.dt * 1000).getDate();
-               if ( ngay == date.Date) { 
-                  var objWind = giatri.wind;
-                  objWind.time = giatri.dt*1000;
-                  dataWind.push(objWind);
-
-                  var temp =  Math.round((giatri.main.temp - 273.15),2);
-                  dataTemp.push({
-                     x: giatri.dt*1000,
-                     y: temp
-                  })
-               }
-            });
-            addChartWind(`gio_${index}`, setupDataWind(dataWind, startHour));
-            addChartTemp(`temp_${index}`, setupDataTemp(dataTemp, startHour));
-         }
-         //Bind Weather
-        
-      }
-   })
-};
 
 function setupDataTemp(dataTemp, startHour){
    var res =[];
@@ -360,4 +267,99 @@ function tranlateWeather(en){
 }
 
 
+function loadDataAjax = (data, dataHour){
 
+   if (data && data.list) {
+   data.list.forEach(function(item, index){
+      if (index <= 5) {
+         var date = convertDate(item.dt);
+         var startHour = new Date(date.Year, date.Month, date.Date, 1);
+         
+         var divNgay  = $(`#ngayDuBao_${index}`);
+         var divChart = $(`#chartDuBao_${index}`);
+         //Bind dữ liệu ngày
+         if (date && divNgay && divChart) {
+            divNgay.find('.tenNgay').text(date.Day + " " + date.Date);
+            var tempMin = convertCelsius(item.temp.min);
+            var tempMax = convertCelsius(item.temp.max);
+            divNgay.find('.tempMin').text(tempMin);
+            divNgay.find('.tempMax').text(tempMax);
+
+            divChart.find('.chart-title').text(date.FullDay + " " + date.Date);
+
+            var chart = $("#pm").highcharts();
+            var data = chart.yAxis[0].series[0].processedYData;
+            var currentAQI = Highcharts.numberFormat(data[data.length -1],0);
+            var intAQI = parseInt(currentAQI);
+            var random = Math.floor(Math.random()*(intAQI+10)) + (intAQI-10);
+            var obj = returnValue(random);
+            divNgay.find("span.glyphicon").css("color",obj.color);
+
+            var weather = item.weather[0];
+            console.log(weather);
+            divChart.find('.weather').append("<img src='img/"+weather.icon+".png'></img>");
+            divChart.find('.weather').append("<p>"+ tranlateWeather(weather.description)+"</p>")
+
+         }
+         //Vẽ biễu đồ
+
+         if (dataHour && dataHour.list ) {
+            var dataWind = [];  
+            var dataTemp =[]; 
+            dataHour.list.forEach(function(giatri, stt ){
+               var ngay = new Date(giatri.dt * 1000).getDate();
+               if ( ngay == date.Date) { 
+                  var objWind = giatri.wind;
+                  objWind.time = giatri.dt*1000;
+                  dataWind.push(objWind);
+
+                  var temp =  Math.round((giatri.main.temp - 273.15),2);
+                  dataTemp.push({
+                     x: giatri.dt*1000,
+                     y: temp
+                  })
+               }
+            });
+            addChartWind(`gio_${index}`, setupDataWind(dataWind, startHour));
+            addChartTemp(`temp_${index}`, setupDataTemp(dataTemp, startHour));
+         }
+         //Bind Weather
+        
+      }
+   })
+   };
+}
+
+function returnWeatherDay(long, lat){
+   if (long && lat) {
+      $.ajax({
+         url: 'http://api.openweathermap.org/data/2.5/forecast/daily',
+         data: {
+            lon: long,
+            lat:lat,
+            cnt:10,
+            APPID: 'bd5e378503939ddaee76f12ad7a97608'
+         },
+         success: function(data){
+            returnWeatherHours(data, long, lat);
+         }
+      });
+   } 
+};
+
+
+function returnWeatherHours(long,lat){
+  if (long && lat) {
+      $.ajax({
+         url: 'http://api.openweathermap.org/data/2.5/forecast',
+         data: {
+            lon: long,
+            lat:lat,
+            APPID: 'bd5e378503939ddaee76f12ad7a97608'
+         },
+         success: function(dataHour){
+            loadDataAjax(data, dataHour);
+         }
+      });
+   }   
+}
