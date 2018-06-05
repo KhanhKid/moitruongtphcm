@@ -262,7 +262,7 @@ function tranlateWeather(en){
 }
 
 
-function loadDataAjax = (data, dataHour){
+function loadDataAjax(data, dataHour){
 
    if (data && data.list) {
    data.list.forEach(function(item, index){
