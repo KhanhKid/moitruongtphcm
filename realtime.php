@@ -182,7 +182,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6 panelBorder" style=" height:400px">
+			<div class="col-md-6 panelBorder" style="" id="map-realtime">
 				
 			</div>
 		</div>

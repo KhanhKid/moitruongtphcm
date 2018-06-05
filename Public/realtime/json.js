@@ -2,7 +2,7 @@
 function returnWeatherDay(long, lat){
    if (long && lat) {
       $.ajax({
-         url: 'http://api.openweathermap.org/data/2.5/forecast/daily',
+         url: 'https://api.openweathermap.org/data/2.5/forecast/daily',
          data: {
             lon: long,
             lat:lat,
@@ -20,7 +20,7 @@ function returnWeatherDay(long, lat){
 function returnWeatherHours(long,lat){
   if (long && lat) {
       $.ajax({
-         url: 'http://api.openweathermap.org/data/2.5/forecast',
+         url: 'https://api.openweathermap.org/data/2.5/forecast',
          data: {
             lon: long,
             lat:lat,
