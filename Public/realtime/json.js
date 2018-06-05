@@ -267,7 +267,7 @@ function tranlateWeather(en){
 }
 
 
-function loadDataAjax(data, dataHour){
+function loadDataAjax = (data, dataHour){
 
    if (data && data.list) {
    data.list.forEach(function(item, index){
@@ -333,32 +333,32 @@ function loadDataAjax(data, dataHour){
 function returnWeatherDay(long, lat){
    if (long && lat) {
       $.ajax({
-         url: 'http://api.openweathermap.org/data/2.5/forecast/daily',
+         url: 'https://api.openweathermap.org/data/2.5/forecast/daily',
          data: {
             lon: long,
             lat:lat,
             cnt:10,
             APPID: 'bd5e378503939ddaee76f12ad7a97608'
          },
-         success: function(data){
-            returnWeatherHours(data, long, lat);
+         success: function(dataDay){
+            returnWeatherHours(dataDay, long, lat);
          }
       });
    } 
 };
 
 
-function returnWeatherHours(long,lat){
+function returnWeatherHours(dataDay, long,lat){
   if (long && lat) {
       $.ajax({
-         url: 'http://api.openweathermap.org/data/2.5/forecast',
+         url: 'https://api.openweathermap.org/data/2.5/forecast',
          data: {
             lon: long,
             lat:lat,
             APPID: 'bd5e378503939ddaee76f12ad7a97608'
          },
          success: function(dataHour){
-            loadDataAjax(data, dataHour);
+            loadDataAjax(dataDay, dataHour);
          }
       });
    }   
