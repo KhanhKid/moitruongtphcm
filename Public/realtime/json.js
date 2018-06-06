@@ -292,7 +292,7 @@ function loadDataAjax(data, dataHour){
 
             var weather = item.weather[0];
             console.log(weather);
-            divChart.find('.weather').append("<img src='img/"+weather.icon+".png'></img>");
+            divChart.find('.weather').append("<img src='Public/realtime/img/"+weather.icon+".png'></img>");
             divChart.find('.weather').append("<p>"+ tranlateWeather(weather.description)+"</p>")
 
          }
