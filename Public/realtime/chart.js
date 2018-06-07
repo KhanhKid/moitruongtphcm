@@ -3,7 +3,20 @@ Highcharts.setOptions({
         useUTC: false
     }
 });
+function random(max, min){
+    var a = [];
+    for (var i = 0; i <= 72; i++) {
+            a.push(Math.floor(Math.random()*(max - min)) + min);
+    }
+    console.log(a.join(", "));
+};
+random(110,40);
 var PM =[96, 84, 105, 91, 51, 85, 78, 69, 91, 102, 56, 57, 62, 70, 77, 47, 44, 100, 96, 52, 78, 101, 65, 81, 55, 86, 106, 83, 96, 71, 77, 58, 41, 75, 109, 42, 89, 103, 101, 66, 44, 82, 69, 100, 51, 46, 45, 67, 42, 89, 70, 87, 69, 92, 104, 62, 50, 107, 57, 60, 60, 87, 109, 44, 52, 71, 72, 64, 64, 72, 99, 70];
+var NO =[79, 57, 73, 54, 58, 53, 56, 75, 97, 64, 94, 61, 56, 63, 75, 64, 55, 71, 71, 56, 64, 55, 84, 73, 63, 61, 50, 60, 57, 77, 53, 95, 64, 70, 93, 69, 63, 85, 54, 79, 73, 65, 97, 99, 61, 97, 92, 96, 67, 72, 51, 51, 61, 73, 53, 88, 86, 52, 79, 69, 66, 83, 78, 94, 54, 86, 81, 83, 67, 53, 84, 55, 84];
+var NO2 = [22, 55, 57, 25, 37, 27, 22, 33, 29, 53, 24, 34, 32, 59, 57, 41, 25, 41, 31, 35, 21, 39, 53, 52, 53, 27, 22, 54, 49, 58, 53, 48, 41, 50, 47, 26, 50, 51, 55, 56, 35, 40, 40, 22, 32, 37, 31, 31, 26, 22, 24, 25, 33, 42, 34, 50, 32, 54, 59, 29, 38, 58, 58, 54, 51, 46, 20, 28, 22, 24, 30, 38, 46];
+var SO2 =[83, 102, 108, 78, 115, 110, 60, 69, 70, 91, 82, 88, 78, 85, 100, 90, 98, 103, 62, 86, 103, 111, 63, 78, 79, 75, 112, 108, 99, 61, 70, 69, 100, 102, 107, 71, 64, 101, 101, 94, 103, 113, 92, 98, 60, 81, 63, 83, 107, 116, 104, 70, 105, 66, 73, 75, 102, 72, 80, 106, 100, 82, 67, 94, 91, 72, 103, 89, 108, 117, 77, 69, 65];
+var O3=[106, 59, 51, 90, 68, 79, 56, 72, 100, 57, 93, 91, 78, 73, 98, 78, 96, 88, 64, 78, 55, 73, 105, 97, 105, 87, 83, 70, 98, 108, 53, 62, 89, 70, 53, 95, 96, 58, 87, 57, 79, 56, 92, 105, 101, 54, 91, 98, 84, 84, 61, 96, 86, 64, 90, 87, 82, 102, 71, 92, 56, 93, 65, 104, 96, 105, 92, 100, 89, 79, 103, 101, 79];
+var GIO=[105, 52, 75, 103, 90, 87, 46, 66, 100, 63, 87, 74, 52, 41, 65, 78, 80, 42, 103, 86, 47, 73, 76, 40, 56, 74, 77, 76, 94, 50, 73, 78, 101, 104, 65, 69, 109, 81, 70, 58, 86, 48, 105, 73, 48, 78, 51, 85, 55, 70, 83, 44, 82, 41, 109, 106, 87, 59, 98, 54, 54, 102, 81, 99, 101, 85, 87, 99, 75, 47, 64, 68, 108];
 function returnPlotLines(now){
     var res = [];
     for (var i = - 47; i <= 0; i ++) {
@@ -26,19 +39,36 @@ function returnPlotLines(now){
 }
 
 
-function AddChart(id, minV, maxV){
+function AddChart(id, indexChange){
     var pointWidth = (document.getElementById(id).offsetWidth)/48;
     var now = (new Date()).getTime();
     var plotLine = returnPlotLines(now);
     var dulieu =[];
-    if (id == 'pm') {
-       dulieu = PM; 
-    } else{
-        for (var i = 0; i <= 72; i++) {
-            dulieu.push(Math.floor(Math.random()*maxV) + minV);
-        }
-    };    
+    switch(id){
+        case 'pm': 
+            dulieu = PM; 
+            break;
+        case 'no':
+            dulieu = NO; 
+            break;
+        case 'no2':
+            dulieu = NO2;
+            break;
+        case 'so2':
+            dulieu = SO2;
+            break;
+        case 'o3':
+            dulieu = O3;
+            break;
+        case 'gio':
+            dulieu = GIO;
+            break;
+    }      
 
+    dulieu = dulieu.map(function(value, index){
+        return parseInt(value) + parseInt(indexChange);
+    })
+console.log(dulieu);
     Highcharts.chart( id, {
         chart: {
             type: 'column',
@@ -308,10 +338,10 @@ function addAxis(){
         }
     });
 }
-AddChart('pm',20,110);
-AddChart('no',50,160);
-AddChart('no2',5,110);
-AddChart('so2',70,160);
-AddChart('o3',20,100);
-AddChart('gio',30,100);
+AddChart('pm',0);
+AddChart('no',0);
+AddChart('no2',0);
+AddChart('so2',0);
+AddChart('o3',0);
+AddChart('gio',0);
 addAxis();

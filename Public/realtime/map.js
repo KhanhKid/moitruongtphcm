@@ -25,7 +25,8 @@ $.getJSON( "Public/realtime/data.json", function( data ) {
                 description:description ,
                 'marker-color': '#f86767',
                 'marker-size': 'small'
-            }
+            },
+            indexChange: v.indexChange
         }]).addTo(map);
         arrayMarker.push(marker);
 
@@ -40,13 +41,14 @@ $.getJSON( "Public/realtime/data.json", function( data ) {
     // Call Chart
     for( var i = 0 ; i <= arrayMarker.length ; i++ ){
         arrayMarker[i].on("click",function(e){
-            AddChart('pm',20,110);
-            AddChart('no',50,160);
-            AddChart('no2',5,110);
-            AddChart('so2',70,160);
-            AddChart('o3',20,100);
-            AddChart('gio',30,100);
-        })};
+            AddChart('pm',arrayMarker[i].indexChange);
+            AddChart('no',arrayMarker[i].indexChange);
+            AddChart('no2',arrayMarker[i].indexChange);
+            AddChart('so2',arrayMarker[i].indexChange);
+            AddChart('o3',arrayMarker[i].indexChange);
+            AddChart('gio',arrayMarker[i].indexChange);
+        })
+    };
 }); 
 
 
