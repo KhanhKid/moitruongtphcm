@@ -26,8 +26,9 @@ $.getJSON( "Public/realtime/data.json", function( data ) {
                 'marker-color': '#f86767',
                 'marker-size': 'small'
             },
-            indexChange: v.indexChange
+           
         }]).addTo(map);
+        marker.indexChange = v.indexChange;
         arrayMarker.push(marker);
 
         // Defaul display Popup
@@ -39,7 +40,7 @@ $.getJSON( "Public/realtime/data.json", function( data ) {
     });
 
     // Call Chart
-    for( var i = 0 ; i <= arrayMarker.length ; i++ ){
+    for( var i = 0 ; i < arrayMarker.length ; i++ ){
         arrayMarker[i].on("click",function(e){
             AddChart('pm',arrayMarker[i].indexChange);
             AddChart('no',arrayMarker[i].indexChange);
