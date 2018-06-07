@@ -42,12 +42,12 @@ $.getJSON( "Public/realtime/data.json", function( data ) {
     // Call Chart
     for( var i = 0 ; i < arrayMarker.length ; i++ ){
         arrayMarker[i].on("click",function(e){
-            AddChart('pm',arrayMarker[i].indexChange);
-            AddChart('no',arrayMarker[i].indexChange);
-            AddChart('no2',arrayMarker[i].indexChange);
-            AddChart('so2',arrayMarker[i].indexChange);
-            AddChart('o3',arrayMarker[i].indexChange);
-            AddChart('gio',arrayMarker[i].indexChange);
+            AddChart('pm', this.indexChange);
+            AddChart('no', this.indexChange);
+            AddChart('no2', this.indexChange);
+            AddChart('so2', this.indexChange);
+            AddChart('o3', this.indexChange);
+            AddChart('gio', this.indexChange);
         })
     };
 }); 
