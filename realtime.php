@@ -11,8 +11,7 @@
 								<div id='chuthichAQIAQI'>
 									<p>
 										<label>Cập nhật lúc:</label>
-										<span>
-											Ngày 4/4/2048 15h
+										<span id="lableTime">											
 										</span>
 									</p>
 								</div>

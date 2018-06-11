@@ -68,7 +68,6 @@ function AddChart(id, indexChange){
     dulieu = dulieu.map(function(value, index){
         return parseInt(value) + parseInt(indexChange);
     })
-console.log(dulieu);
     Highcharts.chart( id, {
         chart: {
             type: 'column',
@@ -338,6 +337,19 @@ function addAxis(){
         }
     });
 }
+
+function getDateTimeForLable(){
+    var newDate = new Date();
+    var day = newDate.getDate();
+    var month = newDate.getMonth() + 1 ;
+    var year = newDate.getFullYear();
+    var hour = newDate.getHours();
+
+    var text =  `${day}/${month}/${year} ${hour}h`;
+
+    $("#lableTime").html(text);
+};
+
 AddChart('pm',0);
 AddChart('no',0);
 AddChart('no2',0);
@@ -345,3 +357,4 @@ AddChart('so2',0);
 AddChart('o3',0);
 AddChart('gio',0);
 addAxis();
+getDateTimeForLable();
