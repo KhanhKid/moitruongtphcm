@@ -182,20 +182,17 @@ function AddChart(id, indexChange){
                         color: '#FFDE33'
                     },
                     {
-                        value:150,
+                        value:200,
                         color: '#FF9933'
                     },
                     {
-                        value:200,
+                        value:300,
                         color: '#CC0033'
                     },
                     {
-                        value:300,
                         color: '#660099'
                     },
-                    {
-                        color: '#7E0023'
-                    }
+                   
                 ],
                 pointPadding:0,
                 borderWidth:0.5,
