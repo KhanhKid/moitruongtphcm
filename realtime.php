@@ -155,7 +155,7 @@
 						<div class="row">
 							<div class="col-md-2 thongso">
 								<div class="col-sm-6 tenthongso">
-									<label>GIO</label>
+									<label>CO</label>
 								</div>
 								<div class="col-sm-6 current">
 									<label>Current</label>
