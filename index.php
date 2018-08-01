@@ -1,4 +1,4 @@
-
+z
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -181,9 +181,8 @@ figure:hover .tieude{
 							</li>
 							<li><a href="javascript:void(0)" >Liên Hệ<span class="arrow-down"></span></a>
 								<ul class="dropdown">
-									<li><a href="">Địa Chỉ :</a></li>
-									<li><a href="">Mail:</a></li>
-									<li><a href="">SĐT:</a></li>
+									<li><a href="">Tác giả : TS. Dương Thị Thúy Nga</a></li>
+									<li><a href="">Email: ngadtt@hcmus.edu.vn</a></li>
 								</ul>
 							</li>
 
@@ -215,7 +214,7 @@ figure:hover .tieude{
 					</div>
 					<div class="col-sm-4 col-sm-offset-1 diachi" style="color: #fff">
 						<ul>
-							<li style="margin-top: 18px;padding-left: 30px; font-size: 14px"><span class="glyphicon glyphicon glyphicon-road"></span> Viện khoa học công nghệ và tính toán </li>
+							<li style="margin-top: 18px;padding-left: 30px; font-size: 14px"><span class="glyphicon glyphicon glyphicon-road"></span> Viện khoa học và công nghệ tính toán </li>
 							<li style="margin-top: 5px;font-style: italic ">Khu công nghệ phần mềm Quang Trung - Q12-TP.HCM</li>
 							<li style="margin-left: 100px; margin-top: 5px; font-size: 14px"><span class="glyphicon glyphicon-home"> </span> <a href="#skhcn" style="color:#fff; font-weight: bold">Trang chủ</a></li>
 
