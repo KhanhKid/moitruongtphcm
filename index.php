@@ -181,7 +181,7 @@ figure:hover .tieude{
 							</li>
 							<li><a href="javascript:void(0)" >Liên Hệ<span class="arrow-down"></span></a>
 								<ul class="dropdown">
-									<li><a href="">Tác giả : TS. Dương Thị Thúy Nga</a></li>
+									<li><a href="">Tác giả: TS. Dương Thị Thúy Nga</a></li>
 									<li><a href="">Email: ngadtt@hcmus.edu.vn</a></li>
 								</ul>
 							</li>

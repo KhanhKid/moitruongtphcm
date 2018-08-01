@@ -230,7 +230,7 @@ figure:hover .tieude{
 					</div>
 					<div class="col-sm-4 col-sm-offset-1 diachi" style="color: #fff">
 						<ul>
-							<li style="margin-top: 18px;padding-left: 30px; font-size: 14px"><span class="glyphicon glyphicon glyphicon-road"></span> Viện khoa học công nghệ và tính toán </li>
+							<li style="margin-top: 18px;padding-left: 30px; font-size: 14px"><span class="glyphicon glyphicon glyphicon-road"></span> Viện khoa học và công nghệ tính toán </li>
 							<li style="margin-top: 5px;font-style: italic ">Khu công nghệ phần mềm Quang Trung - Q12-TP.HCM</li>
 							<li style="margin-left: 100px; margin-top: 5px; font-size: 14px"><span class="glyphicon glyphicon-home"> </span> <a href="#skhcn" style="color:#fff; font-weight: bold">Trang chủ</a></li>
 
