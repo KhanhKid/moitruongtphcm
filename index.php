@@ -180,7 +180,6 @@ figure:hover .tieude{
 							</li>
 							<li><a href="javascript:void(0)" >Liên Hệ<span class="arrow-down"></span></a>
 								<ul class="dropdown">
-									<li><a href="">Tác giả: TS. Dương Thị Thúy Nga</a></li>
 									<li><a href="">Email: ngadtt@hcmus.edu.vn</a></li>
 								</ul>
 							</li>
@@ -222,6 +221,8 @@ figure:hover .tieude{
 					<div class="col-sm-3 col-sm-offset-1" style="color: #fff">
 						<ul style="">
 							<li style=" margin-top: 18px;font-size: 15px; padding-left: 25px">&copy; Bản Quyền 2017</li>
+							<li style="font-style: italic  ">Tác giả: TS. Dương Thị Thúy Nga</li>
+							<li style="font-style: italic  ">Email: ngadtt@hcmus.edu.vn</li>
 							<li style="font-style: italic  ">Mang đến hỗ trợ tốt nhất cho bạn</li>
 						</ul>
 					</div>
