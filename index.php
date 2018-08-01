@@ -222,7 +222,6 @@ figure:hover .tieude{
 						<ul style="">
 							<li style=" margin-top: 18px;font-size: 15px; padding-left: 25px">&copy; Bản Quyền 2017</li>
 							<li style="font-style: italic  ">Tác giả: TS. Dương Thị Thúy Nga</li>
-							<li style="font-style: italic  ">Email: ngadtt@hcmus.edu.vn</li>
 							<li style="font-style: italic  ">Mang đến hỗ trợ tốt nhất cho bạn</li>
 						</ul>
 					</div>
