@@ -280,7 +280,7 @@ function loadDataAjax(data, dataHour){
             divNgay.find('.tempMin').text(tempMin);
             divNgay.find('.tempMax').text(tempMax);
 
-            divChart.find('.chart-title').text(date.FullDay + " " + date.Date);
+            divChart.find('.chart-title').text(date.FullDay);
 
             var chart = $("#pm").highcharts();
             var data = chart.yAxis[0].series[0].processedYData;
