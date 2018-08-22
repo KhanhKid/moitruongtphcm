@@ -190,6 +190,7 @@ function AddChart(id, indexChange){
                         color: '#CC0033'
                     },
                     {
+                       
                         color: '#660099'
                     },
                    
@@ -242,25 +243,20 @@ function returnValue(AQI){
             trangThai:"Trung bình",
             color:'#FFDE33'
         };
-    } else if(101 < value && value <150){
+    } else if(101 < value && value <200){
         return {
             trangThai:"Kém",
             color:'#FF9933'
         }
-    } else if(151 < value && value <200){
+    } else if(201< value && value <300){
         return {
             trangThai:"Xấu",
             color:'#CC0033'
         }
-    } else if(201 < value && value <300){
+    } else{
         return {
             trangThai:"Rất xấu",
             color:'#660099'
-        }
-    } else{
-         return {
-            trangThai:"Nguy hại",
-            color:'#7E0023'
         }
     }
 
